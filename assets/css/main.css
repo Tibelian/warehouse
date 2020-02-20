@@ -1,0 +1,228 @@
+/*
+ALL VARIABLES
+*/
+:root{
+    --opacity4: rgba(0,0,0, .4);
+    --opacity5: rgba(0,0,0, .5);
+    --opacity6: rgba(0,0,0, .6);
+    --opacity7: rgba(0,0,0, .7);
+    --opacity8: rgba(0,0,0, .8);
+    --opacity1r: rgba(200,200,200, .1);
+    --opacity2r: rgba(200,200,200, .2);
+    --opacity3r: rgba(200,200,200, .3);
+    --opacity4r: rgba(200,200,200, .4);
+    --opacity5r: rgba(200,200,200, .5);
+    --opacity6r: rgba(200,200,200, .6);
+    --opacity7r: rgba(200,200,200, .7);
+    --opacity8r: rgba(200,200,200, .8);
+}
+
+/*
+BODY STYLE
+*/
+body{
+    min-height: 100vh;
+    background-color: var(--light);
+    color: #ccc;
+	font-family: 'Montserrat', sans-serif;
+}
+@font-face{
+  font-family: 'Montserrat';
+  src: url('../webfonts/Montserrat-Light.ttf');
+}
+body:after{
+    content: "";
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-filter: blur(20px);
+    filter: blur(10px);
+}
+
+
+/*
+NAVIGATION BAR
+*/
+aside{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: var(--opacity8);
+}
+aside ul li a{
+    color: #d9d9d9;
+}
+aside ul li a:hover{
+    background-color: var(--opacity4);
+    color: #fff;
+}
+aside ul li a i{
+    transition: all 1s;
+    width: 20px;
+    margin-right: 3px;
+}
+aside ul li a:hover i{
+    margin-right: 10px;
+    transition: all 1s;
+}
+aside ul li a.active{
+    background-color: var(--opacity4);
+    color: #fff;
+}
+aside ul li a.active i{
+    margin-right: 10px;
+}
+.profile{
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    background-color: var(--opacity4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/*
+MAIN CONTENT
+*/
+.mcontent{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--opacity8);
+    padding-left: 250px;
+}
+section header{
+    background-color: var(--opacity4);
+}
+.inventory{
+    text-align: center;
+}
+.inventory strong{
+    display: block;
+    width: 100%;
+}
+
+
+/*
+DATA TABLE
+*/
+.page-item, .page-item .page-link, .custom-select, .form-control{
+    background-color: transparent!important;
+}
+.page-item .page-link, .custom-select, .form-control{
+    border: 1px solid var(--opacity8r)!important;
+}
+
+
+/*
+DETAILS
+*/
+a{ color: var(--info); }
+a:hover{ color: var(--primary); }
+.form-control{
+    color: #999!important;
+}
+.form-control:focus{
+    background-color: var(--opacity4r);
+}
+*:focus{
+    outline: none!important;
+}
+.text-brown{
+    color: #E67E22;
+}
+.bg-opacity-4r{
+    background-color: var(--opacity4r);
+}
+.bg-opacity{
+    background-color: var(--opacity4);
+}
+.nav-tabs .nav-link.active {
+    color: #ccc;
+    background-color: var(--opacity8);
+    border-color: var(--opacity4r)!important;
+}
+label{ cursor: pointer; font-weight: bold; }
+.border, .border-right, .border-bottom, .border-left{
+    border-color: var(--opacity4r)!important;
+}
+.border-danger{
+    border-color: var(--danger)!important;
+    border-width: 2px!important;
+}
+.nav-tabs {
+    border-bottom: 1px solid var(--opacity4r)!important;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: var(--opacity6r)!important;
+}
+
+
+/*
+RESPONSIVE
+*/
+.btn-nav{display:none;}
+@media only screen and (max-width: 600px) {
+    aside{
+        width: 0;
+        z-index: -1;
+        visibility: hidden;
+        transition: all 1s;
+        background-color: #000;
+    }
+    .mcontent{padding-left: 0;}
+    .show-left{
+        width: 250px;
+        z-index: 1;
+        visibility: visible;
+        transition: all 1s;
+    }
+
+    .btn-nav{
+        display: block;
+    }
+}
+
+select option {
+    margin: 10px!important;
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+
+
+/*
+Scrollbar
+*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .8); 
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, .2); 
+}  
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, .4); 
+}
+
+
+
+
+.modal-content, .modal-content textarea{
+    color:#000!important;
+}
+
